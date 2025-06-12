@@ -6,13 +6,13 @@
 /*   By: mbrighi <mbrighi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 12:20:57 by mbrighi           #+#    #+#             */
-/*   Updated: 2025/06/10 12:53:39 by mbrighi          ###   ########.fr       */
+/*   Updated: 2025/06/12 19:19:12 by mbrighi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "first_last.h"
 
-void first_last(int arr[], int size, int target, int *first, int *last)
+void	first_last(int arr[], int size, int target, int *first, int *last)
 {
 	int	index = 0;
 	*first = -1;

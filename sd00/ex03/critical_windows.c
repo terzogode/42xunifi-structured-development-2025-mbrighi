@@ -6,7 +6,7 @@
 /*   By: mbrighi <mbrighi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 21:31:16 by mbrighi           #+#    #+#             */
-/*   Updated: 2025/06/12 16:21:09 by mbrighi          ###   ########.fr       */
+/*   Updated: 2025/06/12 19:28:50 by mbrighi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	count_critical_windows(const int *readings, int size)
 	int	val;
 
 	if (!readings || size < 5)
-		return 0;
+		return (0);
 	while (idx <= size - 5)
 	{
 		avg = 0;
@@ -34,7 +34,7 @@ int	count_critical_windows(const int *readings, int size)
 		{
 			val = readings[idx + index_tmp];
 			if (val > 150)
-				break;
+				break ;
 			if (val >= 70)
 				crit_read_tmp++;
 			if (val > max_read)
@@ -53,23 +53,17 @@ int	count_critical_windows(const int *readings, int size)
 	return (ret);
 }
 
-
 // int main()
 // {
 // 	int readings[] = {60, 75, 80, 90, 100, 95, 92, 93, 94, 91, 100, 71, 70, 72, 69, 150, 140, 130, 120, 110, 151, 70, 80, 90, 100, 70, 70, 70, 70, 70};
 // 	int size = sizeof(readings) / sizeof(readings[0]);
 // 	int result = count_critical_windows(readings, size);
-
-
-
 // 	printf("%d\n", result);
 // 	return (0);
 // }
-
 // int	find_min (int average, int crit_average, int crit_readings)
 // {
 // 	int ret = 0;
-
 // 	if (average <= crit_average && average <= crit_readings)
 // 		ret = average;
 // 	if (crit_average <= average && crit_average <= crit_readings)
@@ -78,7 +72,6 @@ int	count_critical_windows(const int *readings, int size)
 // 		ret = crit_readings;
 // 	return (ret);
 // }
-
 // int	count_critical_windows(const int *readings, int size)
 // {
 // 	int	avg = 0;
@@ -88,7 +81,6 @@ int	count_critical_windows(const int *readings, int size)
 // 	int	ret = 0;
 // 	int	crit_read_tmp = 0;
 // 	int	index_tmp = 0;
-
 // 	if (size > 150 && !readings)
 // 		return (0);
 // 	while (idx < size)

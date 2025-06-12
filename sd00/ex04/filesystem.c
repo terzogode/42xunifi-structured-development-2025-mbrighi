@@ -6,13 +6,13 @@
 /*   By: mbrighi <mbrighi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 17:23:05 by mbrighi           #+#    #+#             */
-/*   Updated: 2025/06/12 18:00:42 by mbrighi          ###   ########.fr       */
+/*   Updated: 2025/06/12 19:31:42 by mbrighi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filesystem.h"
 
-FSNode *create_file(const char *name, int size)
+FSNode	*create_file(const char *name, int size)
 {
 	FSNode	*new_file;
 
@@ -26,7 +26,7 @@ FSNode *create_file(const char *name, int size)
 	return (new_file);
 }
 
-FSNode *create_folder(const char *name)
+FSNode	*create_folder(const char *name)
 {
 	FSNode	*folder;
 
@@ -34,7 +34,7 @@ FSNode *create_folder(const char *name)
 	return (folder);
 }
 
-void add_child(FSNode *parent, FSNode *child)
+void	add_child(FSNode *parent, FSNode *child)
 {
 	FSNode	*tmp;
 
@@ -51,12 +51,12 @@ void add_child(FSNode *parent, FSNode *child)
 	tmp->sibling = child;
 }
 
-FSNode *get_children(const FSNode *parent)
+FSNode	*get_children(const FSNode *parent)
 {
 	return (parent->children);
 }
 
-FSNode *get_sibling(const FSNode *node)
+FSNode	*get_sibling(const FSNode *node)
 {
 	return (node->sibling);
 }
@@ -96,4 +96,3 @@ FSNode *get_sibling(const FSNode *node)
 
 //     return 0;
 // }
-

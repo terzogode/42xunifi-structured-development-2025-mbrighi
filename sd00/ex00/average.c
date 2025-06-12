@@ -6,19 +6,22 @@
 /*   By: mbrighi <mbrighi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 11:55:28 by mbrighi           #+#    #+#             */
-/*   Updated: 2025/06/10 12:20:05 by mbrighi          ###   ########.fr       */
+/*   Updated: 2025/06/12 19:17:39 by mbrighi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "average.h"
 //#include <stdio.h>
 
-float average(const int *arr, int size)
+float	average(const int *arr, int size)
 {
-	int		n = 0;
-	int		index = 0;
-	float	ret = 0;
+	int		n;
+	int		index;
+	float	ret;
 
+	n = 0;
+	index = 0;
+	ret = 0;
 	if (size == 0)
 		return (0);
 	while (n < size)

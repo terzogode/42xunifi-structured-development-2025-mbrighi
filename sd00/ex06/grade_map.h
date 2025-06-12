@@ -6,12 +6,14 @@
 /*   By: mbrighi <mbrighi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 14:38:10 by mbrighi           #+#    #+#             */
-/*   Updated: 2025/06/12 16:19:17 by mbrighi          ###   ########.fr       */
+/*   Updated: 2025/06/12 19:33:07 by mbrighi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GRADE_MAP
-# define GRADE_MAP
+#ifndef GRADE_MAP_H
+# define GRADE_MAP_H
+
+# include <stdio.h>
 
 # define PASSED "P"
 # define FAILED "F"
@@ -35,7 +37,7 @@ typedef enum gmapper
 	plusminus_mapper,
 	passfail_mapper,
 	standard_mapper,
-} GradeMapper;
+}	GradeMapper;
 
 void	map_scores(const int *scores, int size, GradeMapper mapper, const char **mapped_grades);
 void	standard_map(const int *scores, const char **mapped_grades, int size);

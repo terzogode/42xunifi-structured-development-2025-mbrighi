@@ -6,20 +6,19 @@
 /*   By: mbrighi <mbrighi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 12:55:12 by mbrighi           #+#    #+#             */
-/*   Updated: 2025/06/11 18:01:54 by mbrighi          ###   ########.fr       */
+/*   Updated: 2025/06/12 19:25:47 by mbrighi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "segmented_runs.h"
 
-int count_segments(const int *arr, int size)
+int	count_segments(const int *arr, int size)
 {
 	int		index = 0;
 	int		index_cmp;
 	int		counter = 0;
 	bool	check;
 	int		ret = 0;
-
 
 	if (size == 0)
 		return (0);
@@ -34,7 +33,7 @@ int count_segments(const int *arr, int size)
 				break ;
 			index_cmp = index + 1;
 			if (arr[index] < arr[index_cmp])
-					counter++;
+				counter++;
 			if (counter == 3)
 				ret++;
 			index++;

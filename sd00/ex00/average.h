@@ -6,13 +6,13 @@
 /*   By: mbrighi <mbrighi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 12:14:59 by mbrighi           #+#    #+#             */
-/*   Updated: 2025/06/10 12:16:47 by mbrighi          ###   ########.fr       */
+/*   Updated: 2025/06/12 19:18:01 by mbrighi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AVERAGE
-# define AVERAGE
+#ifndef AVERAGE_H
+# define AVERAGE_H
 
-float   average(const int *arr, int size);
+float	average(const int *arr, int size);
 
 #endif

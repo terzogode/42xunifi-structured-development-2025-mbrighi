@@ -6,26 +6,26 @@
 /*   By: mbrighi <mbrighi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 17:23:01 by mbrighi           #+#    #+#             */
-/*   Updated: 2025/06/12 17:59:59 by mbrighi          ###   ########.fr       */
+/*   Updated: 2025/06/12 19:23:38 by mbrighi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FILESYSTEM
-# define FILESYSTEM
+#ifndef FILESYSTEM_H
+# define FILESYSTEM_H
 
 # include <string.h> 
 # include <stdio.h>
 # include <stdlib.h>
 
-typedef struct fsnode FSNode;
+//typedef struct fsnode FSNode;
 
-typedef struct fsnode
+typedef struct FSNode
 {
-	const char	*name;
-	int			size;
-	FSNode		*parent;
-	FSNode		*children;
-	FSNode		*sibling;
+	const char		*name;
+	int				size;
+	struct FSNode	*parent;
+	struct FSNode	*children;
+	struct FSNode	*sibling;
 
 }	FSNode;
 

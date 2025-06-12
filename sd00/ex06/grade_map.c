@@ -6,7 +6,7 @@
 /*   By: mbrighi <mbrighi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 14:39:32 by mbrighi           #+#    #+#             */
-/*   Updated: 2025/06/12 16:20:26 by mbrighi          ###   ########.fr       */
+/*   Updated: 2025/06/12 19:28:21 by mbrighi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	standard_map(const int *scores, const char **mapped_grades, int size)
 {
-	int idx;
+	int	idx;
 
 	idx = 0;
 	while (idx < size)
@@ -35,7 +35,7 @@ void	standard_map(const int *scores, const char **mapped_grades, int size)
 
 void	passfail_map(const int *scores, const char **mapped_grades, int size)
 {
-	int idx;
+	int	idx;
 
 	idx = 0;
 	while (idx < size)
@@ -46,12 +46,11 @@ void	passfail_map(const int *scores, const char **mapped_grades, int size)
 			mapped_grades[idx] = PASSED;
 		idx++;
 	}
-
 }
 
 void	plusminus_map(const int *scores, const char **mapped_grades, int size)
 {
-	int idx;
+	int	idx;
 
 	idx = 0;
 	while (idx < size)
@@ -95,10 +94,6 @@ void	map_scores(const int *scores, int size, GradeMapper mapper, const char **ma
 	if (mapper == standard_mapper)
 		standard_map(scores, mapped_grades, size);
 }
-
-
-#include <stdio.h>
-#include "grade_map.h"
 
 // int main(void)
 // {
