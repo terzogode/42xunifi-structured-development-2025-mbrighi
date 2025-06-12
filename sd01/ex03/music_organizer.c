@@ -35,5 +35,5 @@ struct MusicLibrary	*organize_music_library(const char *directory_path)
 		return (NULL);
 	}
 	update_music_library(Mus_Lib, p_m_f);
-	return (1);
+	return (Mus_Lib);
 }
