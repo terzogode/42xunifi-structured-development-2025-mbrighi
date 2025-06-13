@@ -14,8 +14,8 @@
 
 struct Plan	*create_movie_night_plan(void)
 {
-	struct Preference	*user_pref;
-	struct Movie		*movie_pref;
+	struct Preferences	*user_pref;
+	struct MovieList	*movie_pref;
 	struct Plan			*plan_pref;
 
 	user_pref = get_user_preferences();

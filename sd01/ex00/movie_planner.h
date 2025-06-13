@@ -14,10 +14,11 @@
 # define MOVIE_PLANNER_H
 
 # include <string.h>
+# include <stdlib.h>
 
-typedef struct Preferences;
-typedef struct MovieList;
-typedef struct Plan;
+struct Preferences;
+struct MovieList;
+struct Plan;
 
 struct Preferences	*get_user_preferences(void);
 struct MovieList	*find_movies(struct Preferences *prefs);
